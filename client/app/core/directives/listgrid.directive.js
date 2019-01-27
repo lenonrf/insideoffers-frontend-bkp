@@ -50,7 +50,7 @@
 
 
                     $scope.search = function() {
-                        console.log()
+                        console.log($scope.domainList);
                         $scope.domainListFiltered = $filter('filter')($scope.domainList, $scope.searchKeywords);
                         return $scope.onFilterChange();
                     };

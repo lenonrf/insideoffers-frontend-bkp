@@ -12,13 +12,23 @@
 
             var deferred = $q.defer();
 
-            $http.post(uri, data)
+            $http({
+                  method: 'POST',
+                  url: uri,
+                  data: data
+               }).then(function (response){
+                     deferred.resolve(response.data);
+               },function (error){
+                    deferred.reject(null);
+               });
+
+            /*$http.post(uri, data)
                 .success(function (data) {
                     deferred.resolve(data);
                 })
                 .error(function (err) {
                     deferred.reject(null);
-                });
+                });*/
 
             return deferred.promise;
         };
@@ -29,13 +39,23 @@
 
             var deferred = $q.defer();
 
-            $http.get(uri)
+
+             $http({
+                  method: 'GET',
+                  url: uri
+               }).then(function (response){
+                     deferred.resolve(response.data);
+               },function (error){
+                    deferred.reject(null);
+               });
+
+            /*$http.get(uri)
                 .success( function(response, status, headers, config) {
                     deferred.resolve(response);
                 })
                 .error(function(err) {
                     deferred.reject(null);
-                });
+                });*/
 
             return deferred.promise;
         };
@@ -46,13 +66,22 @@
 
             var deferred = $q.defer();
 
-            $http.get(uri)
+            $http({
+                  method: 'GET',
+                  url: uri
+               }).then(function (response){
+                     deferred.resolve(response.data);
+               },function (error){
+                    deferred.reject(null);
+               });
+
+            /*$http.get(uri)
                 .success( function(response, status, headers, config) {
                     deferred.resolve(response);
                 })
                 .error(function(err) {
                     deferred.reject(null);
-                });
+                });*/
 
             return deferred.promise;
         };
@@ -63,13 +92,23 @@
 
             var deferred = $q.defer();
 
-            $http.put(uri, data)
+            $http({
+                  method: 'PUT',
+                  url: uri,
+                  data: data
+               }).then(function (response){
+                     deferred.resolve(response.data);
+               },function (error){
+                    deferred.reject(null);
+               });
+
+            /*$http.put(uri, data)
                 .success(function (data) {
                     deferred.resolve(data);
                 })
                 .error(function (err) {
                     deferred.reject(null);
-                });
+                });*/
 
             return deferred.promise;
         };
@@ -80,13 +119,22 @@
 
             var deferred = $q.defer();
 
-            $http.delete(uri)
+            $http({
+                  method: 'DELETE',
+                  url: uri
+                }).then(function (response){
+                     deferred.resolve(response.data);
+               },function (error){
+                    deferred.reject(null);
+               });
+
+            /*$http.delete(uri)
                 .success( function(response, status, headers, config) {
                     deferred.resolve(response);
                 })
                 .error(function(err) {
                     deferred.reject(null);
-                });
+                });*/
 
             return deferred.promise;
         };

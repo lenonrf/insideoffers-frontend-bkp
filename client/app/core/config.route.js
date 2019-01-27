@@ -2,7 +2,8 @@
     'use strict';
 
     angular.module('app')
-        .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+
 
             var routes, setRoutes;
 
@@ -49,7 +50,7 @@
             }).state('dashboard', {
                 url: '/dashboard',
                 templateUrl: 'app/dashboard/dashboard.html',
-                authenticate: true
+                authenticate: false
 
 
                 /**
@@ -60,21 +61,21 @@
                 url: '/affiliation',
                 templateUrl: 'app/affiliation/affiliation.html',
                 controller: 'AffiliationCtrl',
-                authenticate: true
+                authenticate: false
 
 
             }).state('affiliation_new', {
                 url: '/affiliation/new',
                 templateUrl: 'app/affiliation/affiliation_new.html',
                 controller: 'AffiliationCtrl',
-                authenticate: true
+                authenticate: false
 
 
             }).state('affiliation_edit', {
                 url: '/affiliation/edit',
                 templateUrl: 'app/affiliation/affiliation_edit.html',
                 controller: 'AffiliationCtrl',
-                authenticate: true                
+                authenticate: false                
 
                 /**
                  * MYHALL
@@ -84,7 +85,7 @@
                 url: '/myhall',
                 templateUrl: 'app/myhall/myhall.html',
                 controller: 'MyHallCtrl',
-                authenticate: true
+                authenticate: false
 
 
 
@@ -96,19 +97,19 @@
                 url: '/questions',
                 templateUrl: 'app/questions/questions.html',
                 controller: 'QuestionsCtrl',
-                authenticate: true
+                authenticate: false
 
             }).state('questions_edit', {
                 url: '/questions/edit',
                 templateUrl: 'app/questions/questions_edit.html',
                 controller: 'QuestionsCtrl',
-                authenticate: true
+                authenticate: false
 
             }).state('questions_new', {
                 url: '/questions/new',
                 templateUrl: 'app/questions/questions_new.html',
                 controller: 'QuestionsCtrl',
-                authenticate: true
+                authenticate: false
 
 
 
@@ -120,26 +121,26 @@
                 url: '/offers',
                 templateUrl: 'app/offers/offers.html',
                 controller: 'OffersCtrl',
-                authenticate: true
+                authenticate: false
 
             }).state('offers_new', {
                 url: '/offers/new',
                 templateUrl: 'app/offers/offers_new.html',
                 controller: 'OffersCtrl',
-                authenticate: true
+                authenticate: false
 
             }).state('offers_edit', {
                 url: '/offers/edit',
                 templateUrl: 'app/offers/offers_edit.html',
                 controller: 'OffersCtrl',
-                authenticate: true
+                authenticate: false
 
 
             }).state('offers_details', {
                 url: '/offers/details',
                 templateUrl: 'app/offers/offers_details.html',
                 controller: 'OffersChatsCtrl',
-                authenticate: true
+                authenticate: false
             
 
 
@@ -147,11 +148,14 @@
                 url: '/',
                 templateUrl: 'app/dashboard/dashboard.html',
                 //controller: 'OffersCtrl',
-                authenticate: true
+                authenticate: false
             });
 
             $urlRouterProvider.when('/', '/dashboard')
             .otherwise('/dashboard');
+
+
+            $locationProvider.html5Mode(true);
         }]
     );
 

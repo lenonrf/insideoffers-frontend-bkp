@@ -16,6 +16,7 @@
 
 
     		Affiliation.list().then(function(data){
+                console.log('affiliation', data);
                 $scope.affiliation = data;
             });  
 

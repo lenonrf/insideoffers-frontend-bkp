@@ -641,7 +641,7 @@
                 }).then(function (resp) { 
                     
                     if(resp.data.error_code === 0){ 
-                        itemDelivery.image = 'http://cdn.the-ybox.tech/'+resp.config.data.file.name;
+                        itemDelivery.image = 'http://cdn.insideoffers.com.br/'+resp.config.data.file.name;
                         //$scope.setImageOfferType(resp.config.data.file.name, itemDelivery);
                     }
                 });
@@ -656,28 +656,28 @@
 
                     case 'sponsoring':
                         
-                        $scope.offer.delivery.sponsoring.largeImage = 'http://cdn.the-ybox.tech/'+file_name;
+                        $scope.offer.delivery.sponsoring.largeImage = 'http://cdn.insideoffers.com.br/'+file_name;
                         $scope.isImageSponsoring = true;
                     
                     break;
 
                     case 'survey':
                         
-                        $scope.offer.delivery.survey.smallImage = 'http://cdn.the-ybox.tech/'+file_name;
+                        $scope.offer.delivery.survey.smallImage = 'http://cdn.insideoffers.com.br/'+file_name;
                         $scope.isImageSurvey = true;
 
                     break;
 
                     case 'questionHall':
 
-                        $scope.offer.delivery.questionHall.largeImage = 'http://cdn.the-ybox.tech/'+file_name;
+                        $scope.offer.delivery.questionHall.largeImage = 'http://cdn.insideoffers.com.br/'+file_name;
                         $scope.isImageQuestionHall = true;
 
                     break;
 
                     case 'balcony':
 
-                        $scope.offer.delivery.balcony.largeImage = 'http://cdn.the-ybox.tech/'+file_name;
+                        $scope.offer.delivery.balcony.largeImage = 'http://cdn.insideoffers.com.br/'+file_name;
                         $scope.isImageBalcony = true;
                     
                     break;

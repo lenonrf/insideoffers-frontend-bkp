@@ -2,17 +2,19 @@
 <!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
+        <base href="/">
+        
         <meta charset="utf-8">
         <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
         <title>Inside Offers</title>
-        <meta name="description" content="Responsive Admin Web App with Bootstrap and AngularJS">
-        <meta name="keywords" content="angularjs admin, admin templates, admin themes, bootstrap admin">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
         <!-- Needs images, font... therefore can not be part of main.css -->
         <link rel="stylesheet" href="styles/loader.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500,700,300,300italic,500italic|Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
         <!-- end Needs images -->
 
@@ -123,7 +125,7 @@
         <script src="bower_components/angular-translate/angular-translate.min.js"></script>
         <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 
-        <script src="bower_components/Chart.js/Chart.min.js"></script>
+        <script src="bower_components/Chart.js/dist/Chart.min.js"></script>
         <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
 
         <script src="vendors/jquery.sparkline.min.js"></script>
@@ -150,47 +152,33 @@
 
                 <script src="app/app.module.js"></script>
 
-                <script src="app/form/form.module.js"></script>
-
-                <script src="app/form/formValidation.module.js"></script>
+                <script src="app/core/core.module.js"></script>
 
                 <script src="app/chart/chart.module.js"></script>
 
-                <script src="app/core/core.module.js"></script>
+                <script src="app/layout/layout.module.js"></script>
+
+                <script src="app/form/form.module.js"></script>
+
+                <script src="app/form/formValidation.module.js"></script>
 
                 <script src="app/login/login.module.js"></script>
 
                 <script src="app/map/map.module.js"></script>
 
-                <script src="app/layout/layout.module.js"></script>
-
-                <script src="app/ui/ui.module.js"></script>
+                <script src="app/offers/offers.module.js"></script>
 
                 <script src="app/page/page.module.js"></script>
 
                 <script src="app/table/table.module.js"></script>
 
-                <script src="app/offers/offers.module.js"></script>
-
                 <script src="app/user/user.module.js"></script>
+
+                <script src="app/ui/ui.module.js"></script>
 
                 <script src="app/affiliation/affilation.controller.js"></script>
 
                 <script src="app/affiliation/affiliation.service.js"></script>
-
-                <script src="app/form/form.controller.js"></script>
-
-                <script src="app/form/form.directive.js"></script>
-
-                <script src="app/form/formValidation.controller.js"></script>
-
-                <script src="app/chart/chart.controller.js"></script>
-
-                <script src="app/chart/chart.directive.js"></script>
-
-                <script src="app/chart/chartjs.controller.js"></script>
-
-                <script src="app/chart/flot.controller.js"></script>
 
                 <script src="app/core/app.config.js"></script>
 
@@ -202,21 +190,17 @@
 
                 <script src="app/core/i18n.js"></script>
 
-                <script src="app/login/login.controller.js"></script>
+                <script src="app/chart/chart.controller.js"></script>
 
-                <script src="app/login/login.routes.js"></script>
+                <script src="app/chart/chart.directive.js"></script>
+
+                <script src="app/chart/chartjs.controller.js"></script>
+
+                <script src="app/chart/flot.controller.js"></script>
 
                 <script src="app/dashboard/dashboard.controller.js"></script>
 
                 <script src="app/dashboard/dashboard.service.js"></script>
-
-                <script src="app/map/map.controller.js"></script>
-
-                <script src="app/map/map.directive.js"></script>
-
-                <script src="app/myhall/myhall.controller.js"></script>
-
-                <script src="app/myhall/myhall.service.js"></script>
 
                 <script src="app/layout/layout.controller.js"></script>
 
@@ -226,25 +210,23 @@
 
                 <script src="app/layout/sidebar.directive.js"></script>
 
-                <script src="app/questions/questions.controller.js"></script>
+                <script src="app/form/form.controller.js"></script>
 
-                <script src="app/questions/questions.service.js"></script>
+                <script src="app/form/form.directive.js"></script>
 
-                <script src="app/questions/questions.validator.service.js"></script>
+                <script src="app/form/formValidation.controller.js"></script>
 
-                <script src="app/ui/material.controller.js"></script>
+                <script src="app/login/login.controller.js"></script>
 
-                <script src="app/ui/ui.controller.js"></script>
+                <script src="app/login/login.routes.js"></script>
 
-                <script src="app/ui/ui.directive.js"></script>
+                <script src="app/map/map.controller.js"></script>
 
-                <script src="app/ui/ui.service.js"></script>
+                <script src="app/map/map.directive.js"></script>
 
-                <script src="app/page/page.controller.js"></script>
+                <script src="app/myhall/myhall.controller.js"></script>
 
-                <script src="app/page/page.directive.js"></script>
-
-                <script src="app/table/table.controller.js"></script>
+                <script src="app/myhall/myhall.service.js"></script>
 
                 <script src="app/offers/offers.charts.controller.js"></script>
 
@@ -258,7 +240,27 @@
 
                 <script src="app/offers/offers.wizard.modal.dynamicQuestion.controller.js"></script>
 
+                <script src="app/page/page.controller.js"></script>
+
+                <script src="app/page/page.directive.js"></script>
+
+                <script src="app/questions/questions.controller.js"></script>
+
+                <script src="app/questions/questions.service.js"></script>
+
+                <script src="app/questions/questions.validator.service.js"></script>
+
+                <script src="app/table/table.controller.js"></script>
+
                 <script src="app/user/user.service.js"></script>
+
+                <script src="app/ui/material.controller.js"></script>
+
+                <script src="app/ui/ui.controller.js"></script>
+
+                <script src="app/ui/ui.directive.js"></script>
+
+                <script src="app/ui/ui.service.js"></script>
 
                 <script src="app/core/auth/auth.controller.js"></script>
 
